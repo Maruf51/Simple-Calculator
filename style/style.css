@@ -37,3 +37,11 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+
+@media(max-width:415px){
+    .container {
+        width: 85% !important;
+        border-radius: 5px;
+    }
+}
