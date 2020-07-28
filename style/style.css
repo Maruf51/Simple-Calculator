@@ -1,0 +1,39 @@
+.container {
+    margin-top: 100px;
+    border: 1px solid white;
+    padding: 20px;
+}
+
+button {
+    height: 50px;
+    width: 50px;
+}
+
+.all-lane {
+    margin-bottom: 20px;
+}
+
+.first-lane {
+    margin-top: 20px;
+}
+
+.last-lane {
+    margin-bottom: 10px;
+}
+
+input {
+    text-align: right;
+    font-size: 25px !important;
+    color: black !important;
+    background-color: #fff !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}

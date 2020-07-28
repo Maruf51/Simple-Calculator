@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body class="bg-dark">
+    <div class="container w-25">
+        <input disabled id="input" class="form-control" type="text" placeholder="0" oninput="">
+
+        <div class="d-flex justify-content-around all-lane first-lane">
+            <button id="one" class="btn btn-light">1</button>
+            <button id="two" class="btn btn-light">2</button>
+            <button id="three" class="btn btn-light">3</button>
+            <button id="divide" class="btn btn-light">/</button>
+        </div>
+
+        <div class="d-flex justify-content-around all-lane">
+            <button id="four" class="btn btn-light">4</button>
+            <button id="five" class="btn btn-light">5</button>
+            <button id="six" class="btn btn-light">6</button>
+            <button id="multiple" class="btn btn-light">*</button>
+        </div>
+
+        <div class="d-flex justify-content-around all-lane">
+            <button id="seven" class="btn btn-light">7</button>
+            <button id="eight" class="btn btn-light">8</button>
+            <button id="nine" class="btn btn-light">9</button>
+            <button id="minus" class="btn btn-light">-</button>
+        </div>
+
+        <div class="d-flex justify-content-around all-lane last-lane">
+            <button id="c-btn" class="btn btn-light">C</button>
+            <button id="zero" class="btn btn-light">0</button>
+            <button id="equal" class="btn btn-light">=</button>
+            <button id="plus" class="btn btn-light">+</button>
+        </div>
+
+    </div>
+
+
+
+
+
+    <script>
+        function inputValue(value){
+            var input = document.getElementById('input').value;
+            document.getElementById('input').value = input + value;
+        }
+        
+        document.getElementById('one').addEventListener('click', function(){
+            inputValue(1);
+        });
+
+        document.getElementById('two').addEventListener('click', function(){
+            inputValue(2);
+        });
+
+        document.getElementById('three').addEventListener('click', function(){
+            inputValue(3);
+        });
+
+        document.getElementById('divide').addEventListener('click', function(){
+            inputValue('/');
+        });
+
+        document.getElementById('four').addEventListener('click', function(){
+            inputValue(4);
+        });
+
+        document.getElementById('five').addEventListener('click', function(){
+            inputValue(5);
+        });
+
+        document.getElementById('six').addEventListener('click', function(){
+            inputValue(6);
+        });
+
+        document.getElementById('multiple').addEventListener('click', function(){
+            inputValue('*');
+        });
+
+        document.getElementById('seven').addEventListener('click', function(){
+            inputValue(7);
+        });
+
+        document.getElementById('eight').addEventListener('click', function(){
+            inputValue(8);
+        });
+
+        document.getElementById('nine').addEventListener('click', function(){
+            inputValue(9);
+        });
+
+        document.getElementById('minus').addEventListener('click', function(){
+            inputValue('-');
+        });
+
+        document.getElementById('c-btn').addEventListener('click', function(){
+            document.getElementById('input').value = "";
+        });
+
+        document.getElementById('zero').addEventListener('click', function(){
+            inputValue(0);
+        });
+
+        document.getElementById('equal').addEventListener('click', function(){
+            var inputCalculate = document.getElementById('input').value;
+            if(inputCalculate == ""){
+                document.getElementById('input').value = "";
+            }
+            else{
+                var total = eval(inputCalculate);
+                document.getElementById('input').value = total; 
+            }
+        });
+
+        document.getElementById('plus').addEventListener('click', function(){
+            inputValue('+');
+        });
+    </script>
+</body>
+</html>
